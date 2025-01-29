@@ -1,6 +1,6 @@
-# [Start Bootstrap - SB Admin 2]
+# ZeusWatch - An Energy Efficiency Framework 
 
-[SB Admin 2](https://startbootstrap.com/theme/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+ZeusWatch is an Energy Efficiency Framework for Technological University of the Philippines - Visayas created by Crhiz Salillas and Lanz Villanueva.
 
 For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
 
@@ -60,6 +60,6 @@ Start Bootstrap was created by and is maintained by **[David Miller](https://dav
 
 Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-## Copyright and License
+## Copyright
 
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE) license.
+Copyright &copy; ZeusWatch 2024
