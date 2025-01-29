@@ -1,6 +1,8 @@
 # ZeusWatch - An Energy Efficiency Framework 
 
-ZeusWatch is an Energy Efficiency Framework for <span style="color: red">Technological University of the Philippines - Visayas</span> created by Crhiz Salillas and Lanz Villanueva.
+ZeusWatch is an Energy Efficiency Framework for 
+<span style="color: red">Technological University of the Philippines - Visayas</span> 
+created by Crhiz Salillas and Lanz Villanueva.
 
 For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
 
