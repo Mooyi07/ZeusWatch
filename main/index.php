@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -316,7 +315,7 @@
                                 </div>
                             </div>
                         </div>
-
+                            
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
@@ -431,12 +430,10 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-bar-demo.js"></script>   
-    <script src="js/demo/chart-predict-demo.js"></script>   
-    <script src="js/demo/chart-daily-demo.js">
-        console.log(myDailyChart.data);
-    </script>
+    <script src="js/demo/chart-predict-demo.js"></script>  
+    <script src="js/demo/chart-daily-demo.js"></script>
     <script src="js/suggestions.js"></script>
-    <script src="js/currentTime.js"></script>   
+    <script src="js/currentTime.js"></script>    
 </body>
 
 </html>

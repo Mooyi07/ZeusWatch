@@ -7,9 +7,9 @@
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (!empty($_GET['api'])){
-        if ($_GET['api'] = "crhiz" && !empty($_GET['room'])){
-            sqlSelect($_GET['room']);
+    if (!empty($_POST['api'])){
+        if ($_POST['api'] = "crhiz" && !empty($_POST['room'])){
+            sqlSelect($_POST['room']);
         }
     }
 

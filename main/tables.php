@@ -1,6 +1,6 @@
 <?php 
     include 'server/frontend.php';
-    $testValue = number_format(270.00, 2);
+    $testValue = number_format(0.01, 2);
     include 'server/consumptions.php';
     include 'server/connectDB.php';
 ?>

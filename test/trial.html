@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs">
+    
+</script>
+<script>
+    async function loadModel() {
+        const model = await tf.loadLayersModel('https://yourwebsite.com/tfjs_model/model.json');
+        console.log("Model loaded!");
+        return model;
+    }
+
+    async function predict(inputData) {
+        let model = await loadModel();
+        let inputTensor = tf.tensor2d([inputData]);
+        let output = model.predict(inputTensor);
+        output.print();
+    }
+
+    // Example usage:
+    predict([1.2, 3.4, 5.6]); // Replace with actual input
+</script>
