@@ -12,7 +12,7 @@
             sqlSelect($_POST['room']);
         }
     }
-
+    
     function sqlSelect($room){
         $sql = "SELECT * FROM `roomstate` WHERE `room` = '$room'";
         $results = $GLOBALS['conn']->query($sql);
