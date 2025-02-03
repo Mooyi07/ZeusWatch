@@ -1,5 +1,7 @@
 <?php 
 
+include 'connectDB.php';
+
 $_REQUEST['room'] = array(
         'r1' => 72.32,
         'r2' => 83.45,

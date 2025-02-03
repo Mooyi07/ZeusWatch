@@ -1,5 +1,7 @@
 <?php 
 
+include 'connectDB.php';
+
 $_REQUEST['day'] = array(
         'mon' => 201.23,
         'tues' => 251.42,

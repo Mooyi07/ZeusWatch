@@ -493,13 +493,13 @@
                                     </tfoot>
                                     <tbody>
                                 <?php 
-                                    $sql = "SELECT username, room, state, occupancy, date FROM history";
+                                    $sql = "SELECT * FROM `history`";
                                     $result = $conn->query($sql);
                                     
                                     if ($result->num_rows > 0) {
                                         // output data of each row
                                         while($row = $result->fetch_assoc()) {
-                                          echo "<tr><th>" .$row["username"]. "</th><th>" . $row["room"]. "</th><th>". ($row["state"] == 1 ? "ON" : "OFF") . "</th><th>" . ($row["occupancy"] == 1 ? "Room Occupied":"Not Occupied"). "</th><th>". $row["date"]. "</th></tr>";
+                                          echo "<tr><th>" .$row["username"]. "</th><th>" . $row["room"]. "</th><th><span ". ($row["state"] == 1 ? 'style="color:green">ON' : 'style="color:red">OFF') . "</span></th><th><span " . ($row["occupancy"] == 1 ? 'style="color:#f6c23e">Room Occupied':'style="color:#4e73df">Not Occupied'). "</span></th><th>". $row["date"]. "</th></tr>";
                                         }
                                       } else {
                                         echo "0 results";

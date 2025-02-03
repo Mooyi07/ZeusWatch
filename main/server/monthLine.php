@@ -1,5 +1,8 @@
 <?php 
 
+include 'connectDB.php';
+
+
 $_REQUEST['month'] = array(
         'Jan' => 5648.23,
         'Feb' => 6023.42,
