@@ -308,27 +308,6 @@
 
                     <!-- Content Row -->
 
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between ">
-                                    <h6 class="h5 mb-0 font-weight-bold text-gray-800"><?=$room[$f]["roomInitials"]?></h6>
-                                    <label class="switch">
-                                        <input class="switchJS" data-id="switch-<?=$f?>" type="checkbox" <?= $room[$f]["roomStatus"] != 0 ? "checked" : "unchecked"?>/>
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    
-                                </div>
-                            </div>
-                        </div>
-          
-                        
-                    </div>
 
                     
                 </div>

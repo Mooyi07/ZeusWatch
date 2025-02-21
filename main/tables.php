@@ -226,8 +226,9 @@
                                     the same time provides the formula provided by Negros Power.</p>
 
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
+                        <div class="card-header py-3" style="display:flex; align-items: center; justify-content:space-between">
                             <h6 class="m-0 font-weight-bold text-success">Bill Component</h6>
+                            <input type="text" id="initialValue" placeholder="Enter value of KWH" onkeyup="showHint(this.value)">
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -249,9 +250,9 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Distribution Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.2748</th>
-                                            <th><?= number_format(round(0.2748*$testValue, 2),2) ?></th>
+                                            <th id="distCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Demand Charge</th>
@@ -261,15 +262,15 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Supply Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.4140</th>
-                                            <th><?= number_format(round(0.4140*$testValue, 2),2) ?></th>
+                                            <th id="suppCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Metering Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.3460</th>
-                                            <th><?= number_format(round(0.3460*$testValue, 2),2) ?></th>
+                                            <th id="meterCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Retail Metering Charge</th>
@@ -279,15 +280,15 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">RFSC</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.1518</th>
-                                            <th><?= number_format(round(0.1518*$testValue, 2),2) ?></th>
+                                            <th id="rfsc"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th></th>
                                             <th></th>
                                             <th class="text-primary">Sub Total</th>
-                                            <th class="text-primary"><?= npc($testValue) ?></th>
+                                            <th id="npc" class="text-primary"></th>
                                         </tr>
                                         <tr>
                                             <th class="text-info">SUPPLIER RELATED CHARGES</th>
@@ -297,9 +298,9 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Generation Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>7.3141</th>
-                                            <th><?= number_format(round(7.3141*$testValue, 2),2) ?></th>
+                                            <th id="genCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">ILP Recover</th>
@@ -315,21 +316,21 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Transmission Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>1.3272</th>
-                                            <th><?= number_format(round(1.3272*$testValue, 2),2) ?></th>
+                                            <th id="transCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">System Loss Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.9543</th>
-                                            <th><?= number_format(round(0.9543*$testValue, 2),2) ?></th>
+                                            <th id="sysLossCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th></th>
                                             <th></th>
                                             <th class="text-primary">Sub Total</th>
-                                            <th class="text-primary"><?= src($testValue)?></th>
+                                            <th id="src" class="text-primary"></th>
                                         </tr>
                                         <tr>
                                             <th class="text-info">SUBSIDIES</th>
@@ -339,21 +340,21 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Lifeline Rate Charge</th>
-                                            <th><?= $testValue ?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.0006</th>
-                                            <th><?= number_format(round(0.0006*$testValue, 2),2) ?></th>
+                                            <th id="lrc"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Senior Citizen Subsidy</th>
                                             <th></th>
                                             <th>0.0002</th>
-                                            <th>0.05</th>
+                                            <th id="seniorCitSub">0.05</th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th></th>
                                             <th></th>
                                             <th class="text-primary">Sub Total</th>
-                                            <th class="text-primary"><?= round(0.0006*$testValue, 2) + 0.05 ?></th>
+                                            <th id="subsidies" class="text-primary"></th>
                                         </tr>
                                         <tr>
                                             <th class="text-info">LOCAL GOVERNMENT CHARGES</th>
@@ -381,57 +382,57 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">VAT on Generation</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.5129</th>
-                                            <th><?= round(0.5129*$testValue, 2)?></th>
+                                            <th id="vatGen"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">VAT on Transmission</th>
-                                            <th><?= number_format(round(1.3272*$testValue, 2),2) ?></th>
-                                            <th>0.5129</th>
-                                            <th><?= number_format(round(0.1200*(round(1.3272*$testValue, 2)), 2), 2) ?></th>
+                                            <th id="vatOnTrans"></th>
+                                            <th>0.1200</th>
+                                            <th id="vatTrans"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">VAT on System Loss</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.0765</th>
-                                            <th><?= round(0.0765*$testValue, 2)?></th>
+                                            <th id="vatSystLoss"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">VAT on DSM and Other Charges</th>
-                                            <th><?= npc($testValue) + (round(0.0006*$testValue, 2) + 0.05)?></th>
+                                            <th id="vatDSM"></th>
                                             <th>0.1200</th>
-                                            <th><?= round((npc($testValue) + (round(0.0006*$testValue, 2) + 0.05))* 0.1200, 2) +0.01?></th>
+                                            <th id="vatOtherCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">NPC Stranded Debts</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.0428</th>
-                                            <th><?= round(0.0428*$testValue, 2)?></th>
+                                            <th id="npcStrandDebts"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Missionary Electrification</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.1805</th>
-                                            <th><?= round(0.1805*$testValue, 2)?></th>
+                                            <th id="missionaryElect"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">Environmental Change</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice"></th>
                                             <th>0.0017</th>
-                                            <th><?= round(0.0017*$testValue, 2)?></th>
+                                            <th id="enviroCharge"></th>
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">FIT - Allowance</th>
-                                            <th><?=$testValue?></th>
+                                            <th class="basePrice">/th>
                                             <th>0.0838</th>
-                                            <th><?= round(0.0838*$testValue, 2)?></th>
+                                            <th id="fitAllow"></th>
                                         </tr>
                                         <tr>
                                             <th class="text-info">TOTAL CURRENT BILL AMOUNT</th>
                                             <th></th> 
                                             <th></th>
-                                            <th class="text-info"><?= bill($testValue)?></th>
+                                            <th id="totalBill" class="text-info"></th>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -442,7 +443,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">History</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -549,7 +550,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-
+    <script src="js/formula.js"></script>
 </body>
 
 </html>
