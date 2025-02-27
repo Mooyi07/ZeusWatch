@@ -8,7 +8,7 @@ $${\color{blue}Lanz \space Joseph  \space T. \space Villanueva}$$.
 
 ## Preview
 
-[!ZeusWatch Preview](main/img/readmePrev.png)
+[ZeusWatch Preview](main/img/readmePrev.png)
 
 ## Bugs and Issues
 
