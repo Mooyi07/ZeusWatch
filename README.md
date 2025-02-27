@@ -1,6 +1,6 @@
 # ZeusWatch - An Energy Efficiency Framework 
 
-ZeusWatch is an Energy Efficiency Framework for 
+$${\color{#4e73df}ZeusWatch}$$  is an Energy Efficiency Framework for 
 $${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$ 
 created by 
 $${\color{yellow}Crhiz \space Q. \space Salillas}$$ and 
@@ -16,18 +16,18 @@ Have a bug or an issue with this framework? [Open a new issue](https://github.co
 
 ## About
 
-The objective of ZeusWatch is to predict and analyze using the collected IoT data. Schools are notable energy consumers, and a significant amount of this energy is lost due to ineffective management and usage practices.  The current energy management systems in schools often lack immediate monitoring and intelligent control, resulting in unnecessary consumption and higher operational expenses.  Due to excessive carbon emissions. This inefficiency impacts the financial budgets of schools and worsens environmental problems.
+The objective of $${\color{#4e73df}ZeusWatch}$$ is to predict and analyze using the collected IoT data. Schools are notable energy consumers, and a significant amount of this energy is lost due to ineffective management and usage practices.  The current energy management systems in schools often lack immediate monitoring and intelligent control, resulting in unnecessary consumption and higher operational expenses.  Due to excessive carbon emissions. This inefficiency impacts the financial budgets of schools and worsens environmental problems.
 
 * <https://github.com/Mooyi07/ZeusWatch>
 
-Start Bootstrap was created by and is maintained by **[Lanz Josep T. Villanueva](https://www.facebook.com/mooyi07)**.
+$${\color{#4e73df}ZeusWatch}$$  was created by and is maintained by **[Lanz Joseph T. Villanueva](https://www.facebook.com/mooyi07)**.
 
 * <https://www.facebook.com/mooyi07>
 * <https://mooyi.pages.dev/>
 * <https://github.com/Mooyi07>
 
-ZeusWatch framework is created by [Lanz Josep T. Villanueva](https://www.facebook.com/mooyi07) and [Crhiz Q. Salillas](https://www.facebook.com/crhiz15).
+$${\color{#4e73df}ZeusWatch}$$  framework is created by [Lanz Joseph T. Villanueva](https://www.facebook.com/mooyi07) and [Crhiz Q. Salillas](https://www.facebook.com/crhiz15).
 
 ## Copyright
 
-Copyright &copy; ZeusWatch 2024
+Copyright &copy; $${\color{#4e73df}ZeusWatch}$$ 2024
