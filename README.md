@@ -16,7 +16,7 @@ Have a bug or an issue with this framework? [Open a new issue](https://github.co
 
 ## About
 
-The objective of $${\color{#4e73df}ZeusWatch}$$ is to predict and analyze using the collected IoT data. Schools are notable energy consumers, and a significant amount of this energy is lost due to ineffective management and usage practices.  The current energy management systems in schools often lack immediate monitoring and intelligent control, resulting in unnecessary consumption and higher operational expenses.  Due to excessive carbon emissions. This inefficiency impacts the financial budgets of schools and worsens environmental problems.
+The objective of $${\color{#4e73df}ZeusWatch}$$ is to $${\color{#f6c23e}predict}$$ and $${\color{green}analyze}$$ using the collected IoT data. Schools are notable energy consumers, and a significant amount of this energy is lost due to ineffective management and usage practices.  The current energy management systems in schools often lack immediate monitoring and intelligent control, resulting in unnecessary consumption and higher operational expenses.  Due to excessive carbon emissions. This inefficiency impacts the financial budgets of schools and worsens environmental problems.
 
 * <https://github.com/Mooyi07/ZeusWatch>
 
