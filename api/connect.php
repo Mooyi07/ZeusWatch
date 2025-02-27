@@ -7,21 +7,30 @@
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
+    $GLOBALS['state'] = 0;
+    $adminStat = "AUTOMATIC";
+
     if (!empty($_REQUEST['api'])){
         if ($_REQUEST['api'] = "crhiz" && !empty($_REQUEST['room'])){
             sqlSelect($_REQUEST['room']);
-            checkSched($_REQUEST['room']);
         }
     }
     function sqlSelect($room){
         $sql = "SELECT * FROM `roomstate` WHERE `room` = '$room'";
         $results = $GLOBALS['conn']->query($sql);
         while($row = $results->fetch_assoc()) {
-            echo $row['state'];
+            $state = $row['state'];
+            $adminStat = $row['adminStatus'];
+            $occupancy = $row['occupancy'];
+        }
+        if ($adminStat == "AUTOMATIC"){
+            checkSched($_REQUEST['room'], $occupancy);
+        } else {
+            echo $state;
         }
     }
-
-    function checkSched($room){
+    
+    function checkSched($room, $occupancy){
         $sql = "SELECT * FROM `schedule` WHERE `room` = '$room'";
         $results = $GLOBALS['conn']->query($sql);
         while($row = $results->fetch_assoc()) {
@@ -29,22 +38,26 @@
             $afternoon = $row['afternoon'];
             $currentTime = date('H')+7;
             if ($currentTime > 7 && $currentTime < 12){
-                echo $morning;
-                if ($morning == "08:15 AM - 12:00 PM"){
-                    echo "S";
+                if ($morning != "NULL" && $occupancy == 1){
+                    $state = 1;
                 } else {
-                    echo "N";
+                    $state = 0;
                 }
+                echo $state;
             } else if ($currentTime > 12 && $currentTime < 18){
-                if ($afternoon == "01:00 PM - 04:30 PM"){
-                    echo "S";
+                if ($afternoon != "NULL" && $occupancy == 1){
+                    $state = 1;
                 } else {
-                    echo "N";
+                    $state = 0;
                 }
+                echo $state;
             } else {
-                echo "N";
+                $state = 1;
+                echo $state;
             }
         }
+        $sql = "UPDATE `roomstate` SET `state`='$state' WHERE `room`='$room'";
+        $GLOBALS['conn']->query($sql);
     }
 
 ?>

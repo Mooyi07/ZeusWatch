@@ -38,7 +38,7 @@ function timeDisplay() {
             status = "Classes in Session";
             if (date.getMinutes() > 29){
                 status = "Classes has Ended";
-                progressBar = 495;
+                progressBar = 490;
             }
         }
         else if (date.getHours() > 8 && date.getHours() < 12){
@@ -52,22 +52,27 @@ function timeDisplay() {
         }
         else if (date.getHours() > 16){
             status = "Classes has Ended";
-            progressBar = 495;
+            progressBar = 490;
         }
         else {
             status = "Class has not Started"
         }
-        progressBar = (progressBar / 495) * 100;
+        progressBar = (progressBar / 490) * 100;
         progressBar = parseInt(progressBar);
 
     } else {
         status = "No Class / Holiday";
     }
-    document.getElementById("progressText").innerHTML = progressBar + "%";
-    document.getElementById("progressBar").style.width = progressBar + "%";
     if (document.getElementById("timeSet") != null){
         document.getElementById("timeSet").innerHTML = hours + ":" + date.getMinutes().toString().padStart(2, "0") + ":" + date.getSeconds().toString().padStart(2, "0") + " " + notation;
         document.getElementById("classStatus").innerHTML = status;
+        document.getElementById("progressText").innerHTML = progressBar + "%";
+        document.getElementById("progressBar").style.width = progressBar + "%";
+    }
+    if (document.getElementById("timeSetSi") != null){
+        document.getElementById("timeSetSi").innerHTML = hours + ":" + date.getMinutes().toString().padStart(2, "0") + ":" + date.getSeconds().toString().padStart(2, "0") + " " + notation;
+        document.getElementById("progressTextSi").innerHTML = progressBar + "%";
+        document.getElementById("progressBarSi").style.width = progressBar + "%";
     }
 }
 

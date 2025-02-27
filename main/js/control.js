@@ -21,21 +21,24 @@ $(document).ready(function(){
         const value = $(this).is(":checked");
         const id = $(this).attr("data-id");
         let state = 0;
+        let adminStatus = "AUTOMATIC";
         if (value){
             $("#"+id).html("ON").css({
                 color: "green"
             });
             state = 1;
+            adminStatus = "ADMIN";
         } else {
             $("#"+id).html("OFF").css({
                 color: "red"
             });
             state = 0;
+            adminStatus = "AUTOMATIC";
         }
         $.ajax({
             url: "server/switch.php",
             type: "POST",
-            data: {'state': state, 'room': roomId(id), 'occupancy': occup(occupancy), 'username': username},
+            data: {'state': state, 'room': roomId(id), 'occupancy': occup(occupancy), 'username': username, 'adminStatus': adminStatus},
             success: function(){
             }
         });

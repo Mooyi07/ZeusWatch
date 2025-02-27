@@ -8,11 +8,11 @@ from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 
 app = Flask(__name__)
 
-model = models.load_model("energy_model.h5", compile=False)
+model = models.load_model("energy_models.h5", compile=False)
 model.compile(loss=tf.keras.losses.mae,
                optimizer=tf.keras.optimizers.Adam(),
                metrics=['mae'])
-train_data = pd.read_csv("ECL1.csv")
+train_data = pd.read_csv("rooms.csv")
 
 ct = make_column_transformer(
     (MinMaxScaler(), ["Temperature", "Humidity"]), # get all values between 0 and 1
@@ -30,7 +30,7 @@ def predicting_energy(time, temperature, humidity):
     input_normalized = ct.transform(input_data)
     
     prediction = model.predict(input_normalized)
-    return str(prediction[0][0])
+    return str(float(prediction[0][0]) * 12)
 
 @app.route("/aiModel", methods=['GET'])
 def aiModel():
