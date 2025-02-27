@@ -1,6 +1,6 @@
 # ZeusWatch - An Energy Efficiency Framework 
 
-<p>$${\color{#4e73df}ZeusWatch}$$ is an Energy Efficiency Framework for $${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$</p>
+The $${\color{#4e73df}ZeusWatch}$$ is an Energy Efficiency Framework for $${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$
 
 ## Introduction 
 
