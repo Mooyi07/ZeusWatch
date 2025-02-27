@@ -45,12 +45,30 @@
     //         echo json_encode($_REQUEST['nodeMcu']);
     //     }
     // }
-    function insert() {
-        $sql = "INSERT INTO `daily`(`room`, `daily`) VALUES ('[value-1]','[value-2]')";
+    function checkDay(){
+        if (date("w") > 0 && date("w") < 6){
+            if (date('H') > 8 && date('H') < 16){
+                return 1;
+            } else if (date('H') == 16 && date('i') < 30) {
+                return 1;
+            } else if (date('H') == 8 && date('i') > 14) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return 0;
+        }
     }
-    function update($value, $room) {
-        $sql = "SELECT `daily` FROM `daily` WHERE `room`='$room' ORDER BY ID DESC LIMIT 1";
-        $sql = "UPDATE `daily` SET `daily`='$value',`timestamp`='' WHERE `room`='$room' ORDER BY `id` DESC LIMIT 1";
+    function insert($room, $value, $curentDate) {
+        $newDate = $curentDate + " 16:30:00";
+        $sql = "INSERT INTO `daily`(`room`, `daily`, `timestamp`) VALUES ('$room','$value', '$newDate')";
+        $GLOBALS['conn']->query($sql);
+    }
+    function update($room, $value, $pastVal) {
+        $newVal = $pastVal + $value;
+        $sql = "UPDATE `daily` SET `daily`='$newVal',`timestamp`='' WHERE `room`='$room' ORDER BY `id` DESC LIMIT 1";
+        $GLOBALS['conn']->query($sql);
     }
     if (!empty($_GET['api'])){
         if ($_POST['api'] = "OknYUFT7V64hnfhsh9HUN" && !empty($_GET['current'])){
@@ -60,15 +78,18 @@
             $room = !empty($_GET['room']) ? $_GET['room'] : "ECL";
             $temp = !empty($_GET['temp']) ? $_GET['temp'] : 0;
 
-            // $sql = "INSERT INTO `test`(`room`, `occupancy`, `current`, `hum`, `temp`) VALUES ('$room','$occupancy','$curr','$hum','$temp')";
-
-            // $results = $conn->query($sql);
-
-            echo "CURRENT: ".$curr." kwh<br>";
-            echo "OCCUPANCY: ".$occupancy."<br>";
-            echo "HUMIDITY: ". $hum."%<br>";
-            echo "ROOM: ". $room."<br>";
-            echo "TEMP: ". $temp." °C<br>";
+            $sql = "SELECT * FROM `daily` WHERE `room`='$room' ORDER BY ID DESC LIMIT 1";
+            $results = $conn->query($sql);
+            $rows = $results->fetch_assoc();
+            $sqlDate = date('Y-m-d', strtotime($rows['timestamp']));
+            $currentDate = date('Y-m-d');
+            if (checkDay()){
+                if ($sqlDate != $currentDate){
+                    insert($room, $curr, $curentDate);
+                } else {
+                    update($room, $curr, $rows['daily']);
+                }
+            }
         }
     }
 ?>
