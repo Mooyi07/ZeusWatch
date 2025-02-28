@@ -1,10 +1,10 @@
 # ZeusWatch - An Energy Efficiency Framework 
 
-$${\color{#4e73df}ZeusWatch}$$  is an Energy Efficiency Framework for 
-$${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$ 
-created by 
-$${\color{yellow}Crhiz \space Q. \space Salillas}$$ and 
-$${\color{blue}Lanz \space Joseph  \space T. \space Villanueva}$$.
+The $${\color{#4e73df}ZeusWatch}$$ is an Energy Efficiency Framework for $${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$
+
+## Introduction 
+
+Energy efficiency is essential for schools due to high energy consumption, rising costs, and environmental concerns, but challenges like outdated infrastructure and the lack of real-time monitoring make management difficult. The Internet of Things (IoT) can improve energy management by connecting devices to collect real-time data, enabling automatic control, identifying inefficiencies, and supporting predictive maintenance. This study aims to bridge the research gap in energy management for academic institutions, providing insights for implementing smart campus technology and helping policymakers and administrators enhance efficiency while reducing costs.
 
 ## Preview
 
