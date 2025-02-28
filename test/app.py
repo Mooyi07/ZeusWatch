@@ -30,7 +30,7 @@ def predicting_energy(time, temperature, humidity):
     input_normalized = ct.transform(input_data)
     
     prediction = model.predict(input_normalized)
-    return str(float(prediction[0][0]) * 12)
+    return str(float(prediction[0][0]) * 2)
 
 @app.route("/aiModel", methods=['GET'])
 def aiModel():
