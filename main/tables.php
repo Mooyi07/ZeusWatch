@@ -424,7 +424,7 @@
                                         </tr>
                                         <tr class="mb-4">
                                             <th class="description-charges">FIT - Allowance</th>
-                                            <th class="basePrice">/th>
+                                            <th class="basePrice"></th>
                                             <th>0.0838</th>
                                             <th id="fitAllow"></th>
                                         </tr>

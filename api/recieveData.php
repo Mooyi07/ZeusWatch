@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "zeuswatch";
+    $dbname = "zeuswatch_db";
 
     // Create connection
     date_default_timezone_set("Asia/Manila");

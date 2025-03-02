@@ -14,6 +14,7 @@
     
     $apiKey = "OknYUFT7V64hnfhsh9HUN";
     
+    
     $date = date("F d, Y")."<br>".date("l");
     $schoolStatus;
 
