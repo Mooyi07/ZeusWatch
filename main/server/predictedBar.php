@@ -34,12 +34,19 @@ while($data_d5 = $resultsd5->fetch_assoc()){
     $d5_hum = $data_d5["humidity"];
 }
 
+function predVal($retval){
+    $retval = abs(floatval($retval)) * 12;
+    return $retval;
+    
+}
+
 $_REQUEST['predicted'] = array(
-        'MO' => bill(floatval(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d1_temp."&dh=".$d1_hum."&dn=8"))),
-        'TU' => bill(floatval(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d2_temp."&dh=".$d2_hum."&dn=8"))),
-        'WE' => bill(floatval(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d3_temp."&dh=".$d3_hum."&dn=8"))),
-        'TH' => bill(floatval(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d4_temp."&dh=".$d4_hum."&dn=8"))),
-        'FR' => bill(floatval(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d5_temp."&dh=".$d5_temp."&dn=8")))
+        //'MO' => predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d1_temp."&dh=".$d1_hum."&dn=9")),
+        'MO' => bill(predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d1_temp."&dh=".$d1_hum."&dn=8"))),
+        'TU' => bill(predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d2_temp."&dh=".$d2_hum."&dn=8"))),
+        'WE' => bill(predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d3_temp."&dh=".$d3_hum."&dn=8"))),
+        'TH' => bill(predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d4_temp."&dh=".$d4_hum."&dn=8"))),
+        'FR' => bill(predVal(file_get_contents("http://127.0.0.1:5000/aiModel?dt=".$d5_temp."&dh=".$d5_hum."&dn=8")))
 );
 
 echo json_encode($_REQUEST['predicted']);

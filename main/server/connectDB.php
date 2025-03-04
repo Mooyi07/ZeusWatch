@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "zeuswatch";
+    $dbname = "zeuswatch_db";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

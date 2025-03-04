@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "zeuswatch";
+    $dbname = "zeuswatch_db";
 
     // Create connection
     date_default_timezone_set("Asia/Manila");
@@ -38,6 +38,23 @@
         $sql = "UPDATE `roomtemp` SET `temperature`='$temp',`humidity`='$humidity' WHERE `room`='$room'";
         $GLOBALS['conn']->query($sql);
         echo "UPDATED :".$newVal;
+
+        $sqlECL = "SELECT * FROM `daily` WHERE `room`='ECL' ORDER BY `id` DESC LIMIT 1";
+        $resultECL = $GLOBALS['conn']->query($sqlECL);
+        $rowECL = $resultECL->fetch_assoc();
+
+        $sqlR19 = "SELECT * FROM `daily` WHERE `room`='R19' ORDER BY `id` DESC LIMIT 1";
+        $resultR19 = $GLOBALS['conn']->query($sqlR19);
+        $rowR19 = $resultR19->fetch_assoc();
+
+        $sqlMTB = "SELECT * FROM `daily` WHERE `room`='MTB' ORDER BY `id` DESC LIMIT 1";
+        $resultMTB = $GLOBALS['conn']->query($sqlMTB);
+        $rowMTB = $resultMTB->fetch_assoc();
+
+        $weeklyVal = floatval($rowMTB['daily']) + floatval($rowR19['daily']) + floatval($rowECL['daily']);
+
+        $sqlWeek = "UPDATE `weekly` SET `value`=$weeklyVal ORDER BY `id` DESC LIMIT 1";
+        $GLOBALS['conn']->query($sqlWeek);
     }
     if (!empty($_POST['api'])){
         if ($_POST['api'] == "OknYUFT7V64hnfhsh9HUN" && !empty($_POST['current'])){

@@ -38,13 +38,13 @@ function timeDisplay() {
             status = "Classes in Session";
             if (date.getMinutes() > 29){
                 status = "Classes has Ended";
-                progressBar = 490;
+                progressBar = 480;
             }
         }
         else if (date.getHours() > 8 && date.getHours() < 12){
             status = "Classes in Session";
         }
-        else if (date.getHours() > 13 && date.getHours() < 16){
+        else if (date.getHours() > 12 && date.getHours() < 16){
             status = "Classes in Session";
         }
         else if (date.getHours() > 11 && date.getHours() < 13){
@@ -52,12 +52,12 @@ function timeDisplay() {
         }
         else if (date.getHours() > 16){
             status = "Classes has Ended";
-            progressBar = 490;
+            progressBar = 480;
         }
         else {
             status = "Class has not Started"
         }
-        progressBar = (progressBar / 490) * 100;
+        progressBar = (progressBar / 480) * 100;
         progressBar = parseInt(progressBar);
 
     } else {

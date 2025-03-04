@@ -10,10 +10,10 @@ $d3_val = 0;
 $d1 = "SELECT * FROM daily WHERE `room`='ECL' ORDER BY `timestamp` DESC LIMIT 1";
 $resultsd1 = $conn->query($d1);
 
-$d2 = "SELECT * FROM daily WHERE `room`='MTB' ORDER BY `timestamp` DESC";
+$d2 = "SELECT * FROM daily WHERE `room`='MTB' ORDER BY `timestamp` DESC LIMIT 1";
 $resultsd2 = $conn->query($d2);
 
-$d3 = "SELECT * FROM daily WHERE `room`='R19' ORDER BY `timestamp` DESC";
+$d3 = "SELECT * FROM daily WHERE `room`='R19' ORDER BY `timestamp` DESC LIMIT 1";
 $resultsd3 = $conn->query($d3);
 
 if ($resultsd1->num_rows > 0){

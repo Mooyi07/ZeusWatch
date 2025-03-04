@@ -31,11 +31,13 @@ switch(date("D")){
                 $daySQL = 5;
                 break;
 }
+$count = 1;
 $sql = "SELECT * FROM `weekly` WHERE `day` BETWEEN 1 AND $daySQL ORDER BY `timestamp` DESC LIMIT $daySQL";
 $results = $conn->query($sql);
 if ($results->num_rows > 0){
         while($rows = $results->fetch_assoc()){
-                $line[] = $rows['value'];
+                $line[$daySQL - $count] = $rows['value'];
+                $count++;
         }
         $mon = !empty($line[0]) ? $line[0] : 0;
         $tue = !empty($line[1]) ? $line[1] : 0;
