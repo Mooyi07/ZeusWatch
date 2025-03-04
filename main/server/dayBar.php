@@ -3,7 +3,6 @@
 include 'connectDB.php';
 include 'consumptions.php';
 
-date_default_timezone_set('Asia/Manila');
 $mon = 0;
 $tue = 0;
 $wed = 0;
