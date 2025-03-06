@@ -9,7 +9,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     function checkDay(){
         if (date("w") > 0 && date("w") < 6){
-            if (date('H') > 8 && date('H') < 16){
+            if (date('H') > 8 && date('H') < 19){ //19 if 7
                 return 1;
             } else if (date('H') == 16 && date('i') < 30) {
                 return 1;

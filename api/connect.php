@@ -7,6 +7,7 @@
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
+    date_default_timezone_set("Asia/Manila");
     $GLOBALS['state'] = 0;
     $adminStat = "AUTOMATIC";
 
@@ -36,7 +37,7 @@
         while($row = $results->fetch_assoc()) {
             $morning = $row['morning'];
             $afternoon = $row['afternoon'];
-            $currentTime = date('H')+7;
+            $currentTime = date('H');
             if ($currentTime > 7 && $currentTime < 12){
                 if ($morning != "NULL" && $occupancy == 1){
                     $state = 1;
@@ -44,7 +45,7 @@
                     $state = 0;
                 }
                 echo $state;
-            } else if ($currentTime > 12 && $currentTime < 18){
+            } else if ($currentTime > 12 && $currentTime < 19){
                 if ($afternoon != "NULL" && $occupancy == 1){
                     $state = 1;
                 } else {

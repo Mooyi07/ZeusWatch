@@ -42,7 +42,7 @@ var myPredictChart = new Chart(ctx, {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     datasets: [{
       label: "Revenue",
-      backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'],
+      backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue'],
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
       data: [d1, d2, d3, d4, d5],
@@ -75,12 +75,12 @@ var myPredictChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 20000,
+          max: 200,
           maxTicksLimit: 10,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '₱' + number_format(value, 2);
+            return number_format(value, 2) + ' kwh';
           }
         },
         gridLines: {
@@ -110,7 +110,7 @@ var myPredictChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ₱' + number_format(tooltipItem.yLabel, 2);
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel, 2) + ' kwh';
         }
       }
     },
@@ -137,7 +137,7 @@ function predict(MO, TU, WE, TH, FR)  {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '₱' + number_format(value, 2);
+            return number_format(value, 2) + ' kwh';
           }
         },
         gridLines: {

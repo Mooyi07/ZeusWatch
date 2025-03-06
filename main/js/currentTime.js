@@ -21,7 +21,7 @@ function timeDisplay() {
     let progressBar= "0";
     if (date.getDay() < 6){
         // Progress Bar Algorithm
-        if (date.getHours() > 8 && date.getHours() < 17){
+        if (date.getHours() > 8 && date.getHours() < 19){
             progressBar = 60 * (date.getHours() - 8);
             progressBar = progressBar + date.getMinutes();
         }
@@ -34,30 +34,30 @@ function timeDisplay() {
                 progressBar = (date.getMinutes() - 15);
             }
         }
-        else if (date.getHours() == 16){
+        else if (date.getHours() == 19){
             status = "Classes in Session";
             if (date.getMinutes() > 29){
                 status = "Classes has Ended";
-                progressBar = 480;
+                progressBar = 660;
             }
         }
         else if (date.getHours() > 8 && date.getHours() < 12){
             status = "Classes in Session";
         }
-        else if (date.getHours() > 12 && date.getHours() < 16){
+        else if (date.getHours() > 12 && date.getHours() < 19){
             status = "Classes in Session";
         }
         else if (date.getHours() > 11 && date.getHours() < 13){
             status = "Lunch Break";
         }
-        else if (date.getHours() > 16){
+        else if (date.getHours() > 19){
             status = "Classes has Ended";
-            progressBar = 480;
+            progressBar = 660;
         }
         else {
             status = "Class has not Started"
         }
-        progressBar = (progressBar / 480) * 100;
+        progressBar = (progressBar / 660) * 100;
         progressBar = parseInt(progressBar);
 
     } else {

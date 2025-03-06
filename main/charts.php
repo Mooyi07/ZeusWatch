@@ -280,6 +280,20 @@
                                     The classrooms' data for today.
                                 </div>
                             </div>
+
+                            <!-- Area Chart -->
+                            <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Peak Usage Time Chart</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-area">
+                                            <canvas id="myPeakChart"></canvas>
+                                        </div>
+                                        <hr>
+                                        Peak Usage Time Data.
+                                    </div>
+                            </div>
                         </div>
                     </div>
 
@@ -348,6 +362,7 @@
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
     <script src="js/demo/chart-daily-demo.js"></script>
+    <script src="js/demo/chart-peak-demo.js"></script>
 
 </body>
 
