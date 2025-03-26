@@ -10,7 +10,7 @@ const elements = {
 function updateTemperature() {
     $.post("server/temp.php", function (data) {
         Object.keys(elements).forEach(key => {
-            elements[key].innerHTML = data[key] + (key.includes("Temperature") ? "&degC" : "%");
+            elements[key].innerHTML = (data[key] == undefined ? 0 : data[key]) + (key.includes("Temperature") ? "&degC" : "%");
         });
     }, "json");
 }
