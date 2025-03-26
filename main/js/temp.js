@@ -1,24 +1,19 @@
-let r19Humid = document.getElementById("r19Humidity");
-let r19Temper = document.getElementById("r19Temperature");
-let mtbHumid = document.getElementById("mtbHumidity");
-let mtbTemper = document.getElementById("mtbTemperature");
-let eclHumid = document.getElementById("eclHumidity");
-let eclTemper = document.getElementById("eclTemperature");
+const elements = {
+    r19Humidity: document.getElementById("r19Humidity"),
+    r19Temperature: document.getElementById("r19Temperature"),
+    mtbHumidity: document.getElementById("mtbHumidity"),
+    mtbTemperature: document.getElementById("mtbTemperature"),
+    eclHumidity: document.getElementById("eclHumidity"),
+    eclTemperature: document.getElementById("eclTemperature")
+};
 
-function temp(r19Hum, r19Temp, mtbTemp, mtbHum, eclHum, eclTemp){
-    $.ajax({
-        url: "server/temp.php",
-        dataType: 'json',
-        method: "POST",
-        success: function(tempHum){
-            r19Humid.innerHTML = tempHum.r19Hum + "%";
-            r19Temper.innerHTML = " " + tempHum.r19Temp + "&degC";
-            mtbHumid.innerHTML = tempHum.mtbHum + "%";
-            mtbTemper.innerHTML = " " + tempHum.mtbTemp + "&degC";
-            eclHumid.innerHTML = tempHum.eclHum + "%";
-            eclTemper.innerHTML = " " + tempHum.eclTemp + "&degC";
-        }
-    });
+function updateTemperature() {
+    $.post("server/temp.php", function (data) {
+        Object.keys(elements).forEach(key => {
+            elements[key].innerHTML = data[key] + (key.includes("Temperature") ? "&degC" : "%");
+        });
+    }, "json");
 }
-temp();
-setInterval(temp, 1000);
+
+updateTemperature();
+setInterval(updateTemperature, 1000);
