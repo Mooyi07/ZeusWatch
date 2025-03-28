@@ -27,18 +27,8 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-var m1 = 0;
-var m2 = 0;
-var m3 = 0;
-var m4 = 0;
-var m5 = 0;
-var m6 = 0;
-var m7 = 0;
-var m8 = 0;
-var m9 = 0;
-var m10 = 0;
-var m11 = 0;
-var m12 = 0;
+var m1 = m2 = m3 = m4 = m5 = m6 = 0;
+var m7 = m8 = m9 = m10 = m11 = m12 = 0;
 
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
