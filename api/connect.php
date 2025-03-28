@@ -6,59 +6,62 @@
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
-
     date_default_timezone_set("Asia/Manila");
-    $GLOBALS['state'] = 0;
-    $adminStat = "AUTOMATIC";
 
-    if (!empty($_REQUEST['api'])){
-        if ($_REQUEST['api'] = "crhiz" && !empty($_REQUEST['room'])){
-            sqlSelect($_REQUEST['room']);
-        }
+    global $state;
+    $state = 0;
+
+    if (!empty($_REQUEST['api']) && $_REQUEST['api'] === "crhiz" && !empty($_REQUEST['room'])) {
+        sqlSelect($_REQUEST['room']);
     }
-    function sqlSelect($room){
-        $sql = "SELECT * FROM `roomstate` WHERE `room` = '$room'";
-        $results = $GLOBALS['conn']->query($sql);
-        while($row = $results->fetch_assoc()) {
+
+    function sqlSelect($room) {
+        global $conn;
+        $sql = "SELECT state, adminStatus, occupancy FROM roomstate WHERE room = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $room);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        if ($row = $result->fetch_assoc()) {
             $state = $row['state'];
             $adminStat = $row['adminStatus'];
             $occupancy = $row['occupancy'];
-        }
-        if ($adminStat == "AUTOMATIC"){
-            checkSched($_REQUEST['room'], $occupancy);
-        } else {
-            echo $state;
-        }
-    }
-    
-    function checkSched($room, $occupancy){
-        $sql = "SELECT * FROM `schedule` WHERE `room` = '$room'";
-        $results = $GLOBALS['conn']->query($sql);
-        while($row = $results->fetch_assoc()) {
-            $morning = $row['morning'];
-            $afternoon = $row['afternoon'];
-            $currentTime = date('H');
-            if ($currentTime > 7 && $currentTime < 12){
-                if ($morning != "NULL" && $occupancy == 1){
-                    $state = 1;
-                } else {
-                    $state = 0;
-                }
-                echo $state;
-            } else if ($currentTime > 12 && $currentTime < 19){
-                if ($afternoon != "NULL" && $occupancy == 1){
-                    $state = 1;
-                } else {
-                    $state = 0;
-                }
-                echo $state;
+            
+            if ($adminStat === "AUTOMATIC") {
+                checkSched($room, $occupancy);
             } else {
-                $state = 1;
                 echo $state;
             }
         }
-        $sql = "UPDATE `roomstate` SET `state`='$state' WHERE `room`='$room'";
-        $GLOBALS['conn']->query($sql);
     }
 
+    function checkSched($room, $occupancy) {
+        global $conn;
+        $sql = "SELECT morning, afternoon FROM schedule WHERE room = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $room);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        if ($row = $result->fetch_assoc()) {
+            $morning = $row['morning'];
+            $afternoon = $row['afternoon'];
+            $currentTime = date('H');
+            
+            if (($currentTime >= 8 && $currentTime < 12 && $morning !== "NULL" && $occupancy) ||
+                ($currentTime >= 12 && $currentTime < 19 && $afternoon !== "NULL" && $occupancy)) {
+                $state = 1;
+            } else {
+                $state = 0;
+            }
+            
+            echo $state;
+            
+            $sqlUpdate = "UPDATE roomstate SET state = ? WHERE room = ?";
+            $stmtUpdate = $conn->prepare($sqlUpdate);
+            $stmtUpdate->bind_param("is", $state, $room);
+            $stmtUpdate->execute();
+        }
+    }
 ?>
