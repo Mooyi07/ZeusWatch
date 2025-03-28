@@ -5,79 +5,68 @@
     $dbname = "zeuswatch_db";
 
     // Create connection
-    date_default_timezone_set("Asia/Manila");
     $conn = new mysqli($servername, $username, $password, $dbname);
-    function checkDay(){
-        if (date("w") > 0 && date("w") < 6){
-            if (date('H') > 8 && date('H') < 19){ //19 if 7
-                return 1;
-            } else if (date('H') == 16 && date('i') < 30) {
-                return 1;
-            } else if (date('H') == 8 && date('i') > 14) {
-                return 1;
-            } else {
-                return 0;
-            }
-        } else {
-            return 0;
-        }
+    date_default_timezone_set("Asia/Manila");
+
+    function isWorkingHours() {
+        $hour = date('H');
+        $minute = date('i');
+        $dayOfWeek = date("w");
+
+        return ($dayOfWeek > 0 && $dayOfWeek < 6) && (
+            ($hour > 8 && $hour < 19) ||
+            ($hour == 16 && $minute < 30) ||
+            ($hour == 8 && $minute > 14)
+        );
     }
-    function insert($room, $value, $currentDate) {
-        $sql = "INSERT INTO `daily`(`room`, `daily`, `timestamp`) VALUES ('$room','$value', '$currentDate')";
-        $GLOBALS['conn']->query($sql);
+
+    function insertData($room, $value, $timestamp) {
+        global $conn;
+        $sql = "INSERT INTO `daily`(`room`, `daily`, `timestamp`) VALUES ('$room', '$value', '$timestamp')";
+        $conn->query($sql);
         echo "INSERTED";
     }
-    function update($room, $value, $pastVal, $occupancy, $temp, $humidity, $currentDate) {
-        $newVal = $pastVal + $value;
-        $sql = "UPDATE `daily` SET `daily`='$newVal',`timestamp`='$currentDate' WHERE `room`='$room' ORDER BY `id` DESC LIMIT 1";
-        $GLOBALS['conn']->query($sql);
 
-        $sql = "UPDATE `roomstate` SET `occupancy`='$occupancy' WHERE `room`='$room'";
-        $GLOBALS['conn']->query($sql);
-
-        $sql = "UPDATE `roomtemp` SET `temperature`='$temp',`humidity`='$humidity' WHERE `room`='$room'";
-        $GLOBALS['conn']->query($sql);
-        echo "UPDATED :".$newVal;
-
-        $sqlECL = "SELECT * FROM `daily` WHERE `room`='ECL' ORDER BY `id` DESC LIMIT 1";
-        $resultECL = $GLOBALS['conn']->query($sqlECL);
-        $rowECL = $resultECL->fetch_assoc();
-
-        $sqlR19 = "SELECT * FROM `daily` WHERE `room`='R19' ORDER BY `id` DESC LIMIT 1";
-        $resultR19 = $GLOBALS['conn']->query($sqlR19);
-        $rowR19 = $resultR19->fetch_assoc();
-
-        $sqlMTB = "SELECT * FROM `daily` WHERE `room`='MTB' ORDER BY `id` DESC LIMIT 1";
-        $resultMTB = $GLOBALS['conn']->query($sqlMTB);
-        $rowMTB = $resultMTB->fetch_assoc();
-
-        $weeklyVal = floatval($rowMTB['daily']) + floatval($rowR19['daily']) + floatval($rowECL['daily']);
-
-        $sqlWeek = "UPDATE `weekly` SET `value`=$weeklyVal ORDER BY `id` DESC LIMIT 1";
-        $GLOBALS['conn']->query($sqlWeek);
+    function updateData($room, $value, $pastValue, $occupancy, $temp, $humidity, $timestamp) {
+        global $conn;
+        $newValue = $pastValue + $value;
+        
+        $conn->query("UPDATE `daily` SET `daily`='$newValue', `timestamp`='$timestamp' WHERE `room`='$room' ORDER BY `id` DESC LIMIT 1");
+        $conn->query("UPDATE `roomstate` SET `occupancy`='$occupancy' WHERE `room`='$room'");
+        $conn->query("UPDATE `roomtemp` SET `temperature`='$temp', `humidity`='$humidity' WHERE `room`='$room'");
+        echo "UPDATED: $newValue";
+        
+        $rooms = ['ECL', 'R19', 'MTB'];
+        $weeklyTotal = 0;
+        
+        foreach ($rooms as $r) {
+            $result = $conn->query("SELECT `daily` FROM `daily` WHERE `room`='$r' ORDER BY `id` DESC LIMIT 1");
+            if ($row = $result->fetch_assoc()) {
+                $weeklyTotal += floatval($row['daily']);
+            }
+        }
+        
+        $conn->query("UPDATE `weekly` SET `value`=$weeklyTotal ORDER BY `id` DESC LIMIT 1");
     }
-    if (!empty($_POST['api'])){
-        if ($_POST['api'] == "OknYUFT7V64hnfhsh9HUN" && !empty($_POST['current'])){
-            $curr = !empty($_POST['current']) ? $_POST['current'] : 0;
-            $occupancy = !empty($_POST['pir']) ? $_POST['pir'] : 0;
-            $hum = !empty($_POST['humidity']) ? $_POST['humidity'] : 0;
-            $room = !empty($_POST['room']) ? $_POST['room'] : "ECL";
-            $temp = !empty($_POST['temp']) ? $_POST['temp'] : 0;
 
-            $sql = "SELECT * FROM `daily` WHERE `room`='$room' ORDER BY `timestamp` DESC LIMIT 1";
-            $results = $conn->query($sql);
-            $rows = $results->fetch_assoc();
-            
-            $sqlDate = date('Y-m-d', strtotime($rows['timestamp']));
-            $currentDate = date('Y-m-d');
-            $curr = doubleval($curr) / 3600;
-            $dater = date("Y-m-d H:i:s");
-            if (checkDay()){
-                if ($sqlDate != $currentDate){
-                    insert($room, $curr, $dater);
-                } else {
-                    update($room, $curr, $rows['daily'], $occupancy, $temp, $hum, $dater);
-                }
+    if (!empty($_POST['api']) && $_POST['api'] == "OknYUFT7V64hnfhsh9HUN" && !empty($_POST['current'])) {
+        $room = $_POST['room'] ?? "ECL";
+        $current = ($_POST['current'] ?? 0) / 3600;
+        $occupancy = $_POST['pir'] ?? 0;
+        $humidity = $_POST['humidity'] ?? 0;
+        $temperature = $_POST['temp'] ?? 0;
+        $timestamp = date("Y-m-d H:i:s");
+
+        $result = $conn->query("SELECT * FROM `daily` WHERE `room`='$room' ORDER BY `timestamp` DESC LIMIT 1");
+        $row = $result->fetch_assoc();
+        $lastDate = date('Y-m-d', strtotime($row['timestamp'] ?? ''));
+        $currentDate = date('Y-m-d');
+
+        if (isWorkingHours()) {
+            if ($lastDate != $currentDate) {
+                insertData($room, $current, $timestamp);
+            } else {
+                updateData($room, $current, $row['daily'], $occupancy, $temperature, $humidity, $timestamp);
             }
         }
     }
