@@ -12,9 +12,7 @@ function number_format(number, decimals = 0, dec_point = '.', thousands_sep = ',
   return decimalPart ? integerPart + dec_point + decimalPart : integerPart;
 }
 
-var v1 = 0;
-var v2 = 0;
-var v3 = 0;
+var v1 = v2 = v3 = 0;
 
 var ctx = document.getElementById("myDailyChart");
 
