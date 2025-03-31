@@ -330,7 +330,7 @@
                                     
                                     <h5 class="text-gray-800" >Humidity / Temperature: 
                                         <span id="<?=$room[$f]["idTemp"]?>Humidity" style='color:#f6c23e; font-weight:bold'>0%</span> 
-                                        |<span id="<?=$room[$f]["idTemp"]?>Temperature" style='color:#4e73df; font-weight:bold'> 0&degC</span>
+                                        |<span id="<?=$room[$f]["idTemp"]?>Temperature" style='color:#4e73df; font-weight:bold'>0&degC</span>
                                     </h5>
                                     <h5 class="text-gray-800">Room Vacancy: <?php 
                                     if( $room[$f]["roomVacancy"] == 0){?>
