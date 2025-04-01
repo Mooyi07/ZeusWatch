@@ -20,10 +20,4 @@ $schoolStatus = (date("l") == "Saturday" || date("l") == "Sunday") ? 0 : 1;
 
 $weekly = "100000";
 
-function displayWeek($weekly) {
-    return implode(',', str_split(strrev($weekly), 3));
-}
-
-// Example usage:
-echo displayWeek($weekly);
 ?>
