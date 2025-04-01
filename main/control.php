@@ -329,8 +329,8 @@
                                     </h5>
                                     
                                     <h5 class="text-gray-800" >Humidity / Temperature: 
-                                        <span id="<?=$roomData[$index]["idTemp"]?>Humidity" style='color:#f6c23e; font-weight:bold'>0%</span> 
-                                        |<span id="<?=$roomData[$index]["idTemp"]?>Temperature" style='color:#4e73df; font-weight:bold'>0&degC</span>
+                                        <span id="<?=$roomData[$index]["roomID"]?>Humidity" style='color:#f6c23e; font-weight:bold'>0%</span> 
+                                        |<span id="<?=$roomData[$index]["roomID"]?>Temperature" style='color:#4e73df; font-weight:bold'>0&degC</span>
                                     </h5>
                                     <h5 class="text-gray-800">Room Vacancy: <?php 
                                     if( $roomData[$index]["roomVacancy"] == 0){?>

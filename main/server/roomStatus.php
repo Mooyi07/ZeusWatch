@@ -25,6 +25,7 @@ while ($row = $resultSchedule->fetch_assoc()) {
     ];
 }
 
+
 // Room details
 $rooms = [
     "R19" => "Room 19",
@@ -41,7 +42,7 @@ foreach ($rooms as $key => $name) {
         "roomStatus" => $roomStates[$key]["state"] ?? "Unknown",
         "roomSchedule" => ($roomSchedules[$key]["morning"] ?? "No schedule") . ", " . ($roomSchedules[$key]["afternoon"] ?? "No schedule"),
         "roomVacancy" => $roomStates[$key]["occupancy"] ?? "Unknown",
-        "idTemp" => strtolower($key)
+        "roomID" => strtolower($key)
     ];
 }
 
