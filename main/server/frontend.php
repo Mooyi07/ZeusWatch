@@ -1,42 +1,29 @@
 <?php 
-    session_start();
-    if(isset($_SESSION['username'])){
-        
-    } else {
-        header("Location: ../");
-    }
-    $firstName = $_SESSION['firstName'];
-    $lastName = $_SESSION['lastName'];
-    $username = $_SESSION['username'];
-    $displayName = $firstName." ".$lastName;
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: ../");
+    exit();
+}
 
-    $brand = "ZeusWatch";
-    
-    $apiKey = "OknYUFT7V64hnfhsh9HUN";
-    
-    
-    $date = date("F d, Y")."<br>".date("l");
-    $schoolStatus;
+$firstName = $_SESSION['firstName'];
+$lastName = $_SESSION['lastName'];
+$username = $_SESSION['username'];
+$displayName = "$firstName $lastName";
 
-    if (date("l") == "Saturday" || date("l") == "Sunday"){
-        $schoolStatus = 0;
-    } else {
-        $schoolStatus = 1;
-    }
+$brand = "ZeusWatch";
 
-    $weekly = "";
-    $weekly = $weekly."100000";
-    function displayWeek($weekly, $dispWeek, $count) {
-        for($i = strlen($weekly)-1; $i >= 0; $i--){
-            if ($count == 3){
-                $count = 0;
-                $dispWeek = ",".$dispWeek;
-            }
-            else {
-                $count++;
-            }
-            $dispWeek = $weekly[$i].$dispWeek;
-        }
-        echo $dispWeek;
-    }
+$apiKey = "OknYUFT7V64hnfhsh9HUN";  // Consider storing this securely
+
+$date = date("F d, Y") . " - " . date("l");
+
+$schoolStatus = (date("l") == "Saturday" || date("l") == "Sunday") ? 0 : 1;
+
+$weekly = "100000";
+
+function displayWeek($weekly) {
+    return implode(',', str_split(strrev($weekly), 3));
+}
+
+// Example usage:
+echo displayWeek($weekly);
 ?>
