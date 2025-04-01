@@ -311,7 +311,7 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between ">
                                     <h6 class="h5 mb-0 font-weight-bold text-gray-800"><?=$roomData[$index]["roomInitials"]?></h6>
                                     <label class="switch">
-                                        <input class="switchJS" data-id="switch-<?=$index?>" type="checkbox" <?= $roomData[$index]["roomStatus"] != 0 ? "checked" : "unchecked"?>/>
+                                        <input class="switchJS" data-id="switch-<?=$f?>" type="checkbox" <?= $roomData[$f]["roomStatus"] != 0 ? "checked" : "" ?>/>
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
