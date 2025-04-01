@@ -303,23 +303,23 @@
 
                     <div class="row">
                     <?php 
-                        for($f = 0; $f < count($room); $f++){ ?>
+                        for ($f = 0; $f < count($rooms); $f++) { ?>
                           <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between ">
-                                    <h6 class="h5 mb-0 font-weight-bold text-gray-800"><?=$room[$f]["roomInitials"]?></h6>
+                                    <h6 class="h5 mb-0 font-weight-bold text-gray-800"><?=$roomData[$f]["roomInitials"]?></h6>
                                     <label class="switch">
-                                        <input class="switchJS" data-id="switch-<?=$f?>" type="checkbox" <?= $room[$f]["roomStatus"] != 0 ? "checked" : "unchecked"?>/>
+                                        <input class="switchJS" data-id="switch-<?=$f?>" type="checkbox" <?= $roomData[$f]["roomStatus"] != 0 ? "checked" : "unchecked"?>/>
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <h5 class="text-gray-800">Room Name: <?=$room[$f]["roomName"]?></h5>
+                                    <h5 class="text-gray-800">Room Name: <?=$roomData[$f]["roomName"]?></h5>
                                     <h5 class="text-gray-800">Room Status: <?php
-                                        if($room[$f]["roomStatus"] != 0){?>
+                                        if($roomData[$f]["roomStatus"] != 0){?>
                                             <span id="switch-<?=$f?>" style="color:green; font-weight: bold;">ON</span>
                                         <?php
                                         } else {?>
@@ -329,17 +329,17 @@
                                     </h5>
                                     
                                     <h5 class="text-gray-800" >Humidity / Temperature: 
-                                        <span id="<?=$room[$f]["idTemp"]?>Humidity" style='color:#f6c23e; font-weight:bold'>0%</span> 
-                                        |<span id="<?=$room[$f]["idTemp"]?>Temperature" style='color:#4e73df; font-weight:bold'>0&degC</span>
+                                        <span id="<?=$roomData[$f]["idTemp"]?>Humidity" style='color:#f6c23e; font-weight:bold'>0%</span> 
+                                        |<span id="<?=$roomData[$f]["idTemp"]?>Temperature" style='color:#4e73df; font-weight:bold'>0&degC</span>
                                     </h5>
                                     <h5 class="text-gray-800">Room Vacancy: <?php 
-                                    if( $room[$f]["roomVacancy"] == 0){?>
+                                    if( $roomData[$f]["roomVacancy"] == 0){?>
                                         <span id="occupancy-<?=$f?>" style="color:green; font-weight: bold;">Not Occupied</span>
                                         <?php
                                     } else {?>
                                         <span id="occupancy-<?=$f?>" style="color:red; font-weight: bold;">Room Occupied</span><?php
                                     } ?>
-                                    <h5 class="text-gray-800">Schedule: <?=$room[$f]["roomSchedule"]?></h5>
+                                    <h5 class="text-gray-800">Schedule: <?=$roomData[$f]["roomSchedule"]?></h5>
                                     </h5>
                                 </div>
                             </div>
