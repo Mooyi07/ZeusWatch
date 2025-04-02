@@ -23,18 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['firstName'] = $row['firstName'];
             $_SESSION['lastName'] = $row['lastName'];
 
-            // Implement 'Remember Me' securely with a cookie
-            if (isset($_POST['remember'])) {
-                $token = bin2hex(random_bytes(32)); // Generate secure token
-                setcookie("rememberMe", $token, time() + (86400 * 30), "/", "", false, true);
-
-                // Store token in DB (you need a tokens table for this)
-                $token_sql = "UPDATE accounts SET remember_token = ? WHERE username = ?";
-                $token_stmt = $conn->prepare($token_sql);
-                $token_stmt->bind_param("ss", $token, $username);
-                $token_stmt->execute();
-                $token_stmt->close();
-            }
 
             header("Location: main/");
             exit();
