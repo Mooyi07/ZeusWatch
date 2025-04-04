@@ -1,0 +1,14 @@
+{
+    "subjects": [
+        {
+            "id": 1,
+            "subject_code": "MATH113-V",
+            "prerequisite": null,
+            "equiv_sub_code": "MATH113-V",
+            "description": "Advanced Algebra",
+            "units": 3,
+            "school_year": 2122,
+            "semester": "First Term"
+        }
+    ]
+}
