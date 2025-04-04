@@ -30,20 +30,12 @@ if ($results->num_rows > 0){
     }
 }
 
-// Assign values to variables
-$mon = $line[0];
-$tue = $line[1];
-$wed = $line[2];
-$thu = $line[3];
-$fri = $line[4];
-
-
 $_REQUEST['day'] = array(
-        'mon' => bill($mon),
-        'tues' => bill($tue),
-        'wed' => bill($wed),
-        'thurs' =>  bill($thu),
-        'fri' => bill($fri)
+        'mon' => bill($line[0]),
+        'tues' => bill($line[1]),
+        'wed' => bill($line[2]),
+        'thurs' =>  bill($line[3]),
+        'fri' => bill($line[4])
 );
 
 echo json_encode($_REQUEST['day']);
