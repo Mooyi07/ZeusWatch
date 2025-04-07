@@ -59,6 +59,46 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
+        },
+        {
+            "id": 7,
+            "subject_code": "PE1-V",
+            "prerequisite": null,
+            "equiv_sub_code": "PE1-V",
+            "description": "Physical Fitness and Activities",
+            "units": 2,
+            "school_year": 2122,
+            "semester": "First Term"
+        },
+        {
+            "id": 8,
+            "subject_code": "EM111ECE-V",
+            "prerequisite": null,
+            "equiv_sub_code": "EM111ECE-V",
+            "description": "Engineering Mechanics: Statics and Dynamics",
+            "units": 3,
+            "school_year": 2122,
+            "semester": "First Term"
+        },
+        {
+            "id": 9,
+            "subject_code": "CPE114-V",
+            "prerequisite": null,
+            "equiv_sub_code": "CPE114-V",
+            "description": "Computer Programming 2",
+            "units": 3,
+            "school_year": 2122,
+            "semester": "Second Term"
+        },
+        {
+            "id": 10,
+            "subject_code": null,
+            "prerequisite": null,
+            "equiv_sub_code": null,
+            "description": null,
+            "units": null,
+            "school_year": null,
+            "semester": null
         }
     ]
 }
