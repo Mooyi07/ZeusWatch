@@ -32,11 +32,11 @@
         },
         {
             "id": 4,
-            "subject_code": "CPE114-V",
+            "subject_code": "ECE111-V",
             "prerequisite": null,
-            "equiv_sub_code": "CPE114-V",
-            "description": "Computer Programming 2",
-            "units": 3,
+            "equiv_sub_code": "ECE111-V",
+            "description": "Engineering Drawing and Electronics Standards",
+            "units": 1,
             "school_year": 2122,
             "semester": "First Term"
         },
