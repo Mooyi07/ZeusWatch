@@ -1,9 +1,11 @@
 {   
     "Course": "Computer Engineering",
-    "Course_Abbrevation": "CpE",
+    "Course_Abbrevation": "CPE",
     "Organization": "Institute of Computer Engineers of the Philippines",
     "Organization_Abbrevation": "ICpEP",
-    "Course_code": "BSCE",
+    "Course_code": "BSCPE",
+    "Course_Description": "Bachelor of Science in Computer Engineering",
+    
     "College": "College of Engineering",
     "Subjects": [
       {
