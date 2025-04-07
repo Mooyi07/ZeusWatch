@@ -19,6 +19,36 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
+        },
+        {
+            "id": 3,
+            "subject_code": "ECE113-V",
+            "prerequisite": null,
+            "equiv_sub_code": "ECE113-V",
+            "description": "Discrete Mathematics",
+            "units": 3,
+            "school_year": 2122,
+            "semester": "First Term"
+        },
+        {
+            "id": 4,
+            "subject_code": "CPE114-V",
+            "prerequisite": null,
+            "equiv_sub_code": "CPE114-V",
+            "description": "Computer Programming 2",
+            "units": 3,
+            "school_year": 2122,
+            "semester": "First Term"
+        },
+        {
+            "id": 5,
+            "subject_code": "CPE115-V",
+            "prerequisite": null,
+            "equiv_sub_code": null,
+            "description": null,
+            "units": null,
+            "school_year": null,
+            "semester": null
         }
     ]
 }
