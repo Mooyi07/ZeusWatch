@@ -1,6 +1,8 @@
 {
-    "subjects": [
-        {
+    "Subjects": [
+      {
+        "First_year_subs": [
+          {
             "id": 1,
             "subject_code": "MATH113-V",
             "prerequisite": null,
@@ -9,8 +11,8 @@
             "units": 3,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 2,
             "subject_code": "CPE112-V",
             "prerequisite": null,
@@ -19,8 +21,8 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 3,
             "subject_code": "ECE113-V",
             "prerequisite": null,
@@ -29,8 +31,8 @@
             "units": 3,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 4,
             "subject_code": "ECE111-V",
             "prerequisite": null,
@@ -39,8 +41,8 @@
             "units": 1,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 5,
             "subject_code": "MATH115-V",
             "prerequisite": null,
@@ -49,8 +51,8 @@
             "units": 5,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 6,
             "subject_code": "EM112ECE-V",
             "prerequisite": null,
@@ -59,8 +61,8 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 7,
             "subject_code": "PE1-V",
             "prerequisite": null,
@@ -69,8 +71,8 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 8,
             "subject_code": "CPE112A-V",
             "prerequisite": null,
@@ -79,8 +81,8 @@
             "units": 2,
             "school_year": 2122,
             "semester": "First Term"
-        },
-        {
+          },
+          {
             "id": 9,
             "subject_code": "CPE114-V",
             "prerequisite": null,
@@ -89,16 +91,9 @@
             "units": 3,
             "school_year": 2122,
             "semester": "Second Term"
-        },
-        {
-            "id": 10,
-            "subject_code": null,
-            "prerequisite": null,
-            "equiv_sub_code": null,
-            "description": null,
-            "units": null,
-            "school_year": null,
-            "semester": null
-        }
+          }
+        ]
+      }
     ]
-}
+  }
+  
