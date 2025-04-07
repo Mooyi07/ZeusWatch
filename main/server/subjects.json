@@ -72,11 +72,11 @@
         },
         {
             "id": 8,
-            "subject_code": "EM111ECE-V",
+            "subject_code": "CPE112A-V",
             "prerequisite": null,
-            "equiv_sub_code": "EM111ECE-V",
-            "description": "Engineering Mechanics: Statics and Dynamics",
-            "units": 3,
+            "equiv_sub_code": "CPE112A-V",
+            "description": "Programming Logic and Design",
+            "units": 2,
             "school_year": 2122,
             "semester": "First Term"
         },
