@@ -84,13 +84,13 @@
           },
           {
             "id": 9,
-            "subject_code": "CPE114-V",
+            "subject_code": "GEC1-V",
             "prerequisite": null,
-            "equiv_sub_code": "CPE114-V",
-            "description": "Computer Programming 2",
+            "equiv_sub_code": "GEC1-V",
+            "description": "Understanding the Self",
             "units": 3,
             "school_year": 2122,
-            "semester": "Second Term"
+            "semester": "First Term"
           }
         ]
       }
