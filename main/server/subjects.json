@@ -42,13 +42,13 @@
         },
         {
             "id": 5,
-            "subject_code": "CPE115-V",
+            "subject_code": "MATH115-V",
             "prerequisite": null,
-            "equiv_sub_code": null,
-            "description": null,
-            "units": null,
-            "school_year": null,
-            "semester": null
+            "equiv_sub_code": "MATH115-V",
+            "description": "Engineering Mathematics",
+            "units": 5,
+            "school_year": 2122,
+            "semester": "First Term"
         }
     ]
 }
