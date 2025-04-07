@@ -49,6 +49,16 @@
             "units": 5,
             "school_year": 2122,
             "semester": "First Term"
+        },
+        {
+            "id": 6,
+            "subject_code": "EM112ECE-V",
+            "prerequisite": null,
+            "equiv_sub_code": "EM112ECE-V",
+            "description": "Engineering Measurement: Metrology/Surveying",
+            "units": 2,
+            "school_year": 2122,
+            "semester": "First Term"
         }
     ]
 }
