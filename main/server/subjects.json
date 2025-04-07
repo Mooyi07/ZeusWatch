@@ -9,6 +9,16 @@
             "units": 3,
             "school_year": 2122,
             "semester": "First Term"
+        },
+        {
+            "id": 2,
+            "subject_code": "CPE112-V",
+            "prerequisite": null,
+            "equiv_sub_code": "CPE112-V",
+            "description": "Computer Engineering as a Discipline",
+            "units": 2,
+            "school_year": 2122,
+            "semester": "First Term"
         }
     ]
 }
