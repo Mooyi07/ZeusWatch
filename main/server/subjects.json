@@ -113,8 +113,13 @@
                 "school_year": 2122,
                 "semester": "First Term"
               }
+            ],
+            "Second_Semester": [
+              {
+                
+              }
             ]
-          }
+          }          
         ]
       }
     ]
