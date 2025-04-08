@@ -116,6 +116,16 @@
             ],
             "Second_Semester": [
               {
+                "id": 1,
+                "subject_code": "CHEM124-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CHEM124-V",
+                "description": "Chemistry for Engineers",
+                "units": 4,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
                 
               }
             ]
