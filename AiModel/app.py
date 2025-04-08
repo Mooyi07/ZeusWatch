@@ -48,7 +48,7 @@ def aiModel():
             return jsonify({"error": "Missing parameters"}), 400
         
         prediction = predicting_energy(time_value, temper, humid)
-        return jsonify({"predicted_energy": prediction})  # Return as JSON
+        return ({"predicted_energy": prediction})  # Return as JSON
     except Exception as e:
         return jsonify({"error": str(e)}), 500  # Handle errors gracefully
 

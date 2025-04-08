@@ -17,24 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Use prepared statement to prevent SQL injection
-    $sql = "SELECT username, firstName, lastName, password FROM accounts WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-
-    if ($stmt === false) {
-        // Error handling if the statement preparation fails
-        die('MySQL prepare failed: ' . $conn->error);
-    }
-
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
+    $sql = "SELECT username, firstName, lastName, password FROM accounts WHERE username = '$username'";
+    $result = $conn->query($sql);
+    
     // Check if user exists
-    if ($result->num_rows === 1) {
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
         // Verify hashed password
-        if (password_verify($password, $row["password"])) {
+        if ($password == $row["password"]) {
             // Store user data in session securely
             $_SESSION['username'] = $row['username'];
             $_SESSION['firstName'] = $row['firstName'];
