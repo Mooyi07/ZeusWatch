@@ -134,6 +134,16 @@
                 "units": 2,
                 "school_year": 2122,
                 "semester": "Second Term"
+              },
+              {
+                "id": 3,
+                "subject_code": "COMP132-V",
+                "prerequisite": "CPE112A-V",
+                "equiv_sub_code": "COMP132-V",
+                "description": "Computer Programming",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Second Term"
               }
             ]
           }          
