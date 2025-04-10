@@ -126,7 +126,14 @@
                 "semester": "Second Term"
               },
               {
-                
+                "id": 2,
+                "subject_code": "DRAW132-V",
+                "prerequisite": "ECE111-V",
+                "equiv_sub_code": "DRAW132-V",
+                "description": "Computer Aided Drawing (CAD)",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Second Term"
               }
             ]
           }          
