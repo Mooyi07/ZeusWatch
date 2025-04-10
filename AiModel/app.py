@@ -43,14 +43,11 @@ def aiModel():
         temper = float(request.args.get("dt"))
         humid = float(request.args.get("dh"))
         time_value = request.args.get("dn")
-
-        if temper is None or humid is None or time_value is None:
-            return jsonify({"error": "Missing parameters"}), 400
         
         prediction = predicting_energy(time_value, temper, humid)
-        return ({"predicted_energy": prediction})  # Return as JSON
+        print(prediction)
     except Exception as e:
-        return jsonify({"error": str(e)}), 500  # Handle errors gracefully
+        print ("error")  # Handle errors gracefully
 
 if __name__ == "__main__":
     app.run(debug=True)
