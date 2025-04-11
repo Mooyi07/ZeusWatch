@@ -164,6 +164,16 @@
                 "units": 3,
                 "school_year": 2122,
                 "semester": "Second Term"
+              },
+              {
+                "id": 6,
+                "subject_code": "GEC5-V",
+                "prerequisite": null,
+                "equiv_sub_code": "GEC5-V",
+                "description": "Purposive Communication",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
               }
             ]
           }          
