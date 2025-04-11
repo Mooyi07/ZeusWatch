@@ -154,6 +154,26 @@
                 "units": 4,
                 "school_year": 2122,
                 "semester": "Second Term"
+              },
+              {
+                "id": 5,
+                "subject_code": "GEC4-V",
+                "prerequisite": null,
+                "equiv_sub_code": "GEC4-V",
+                "description": "Mathematics in the Modern World",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 6,
+                "subject_code": "GEC5-V",
+                "prerequisite": null,
+                "equiv_sub_code": "GEC5-V",
+                "description": "Purposive Communication",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
               }
             ]
           }          
