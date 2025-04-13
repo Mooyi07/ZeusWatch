@@ -38,7 +38,6 @@ def predicting_energy(time, temperature, humidity):
 
 @app.route("/aiModel", methods=['GET'])
 def aiModel():
-    """API endpoint to predict energy consumption based on temperature, humidity, and time."""
     try:
         temper = float(request.args.get("dt"))
         humid = float(request.args.get("dh"))
