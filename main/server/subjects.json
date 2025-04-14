@@ -199,13 +199,13 @@
             "Third_Term": [
               {
                 "id": 1,
-                "subject_code": "CHEM124-V",
-                "prerequisite": null,
-                "equiv_sub_code": "CHEM124-V",
-                "description": "Chemistry for Engineers",
-                "units": 4,
+                "subject_code": "COMP212A-V",
+                "prerequisite": "COMP132-V",
+                "equiv_sub_code": "COMP212A-V",
+                "description": "Computer Programming 2 (Object-Oriented)",
+                "units": 2,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 2,
