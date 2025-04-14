@@ -195,6 +195,88 @@
                 "school_year": 2122,
                 "semester": "Second Term"
               }
+            ],
+            "Third_Semester": [
+              {
+                "id": 1,
+                "subject_code": "CHEM124-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CHEM124-V",
+                "description": "Chemistry for Engineers",
+                "units": 4,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 2,
+                "subject_code": "DRAW132-V",
+                "prerequisite": "ECE111-V",
+                "equiv_sub_code": "DRAW132-V",
+                "description": "Computer Aided Drawing (CAD)",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 3,
+                "subject_code": "COMP132-V",
+                "prerequisite": "CPE112A-V",
+                "equiv_sub_code": "COMP132-V",
+                "description": "Computer Programming",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 4,
+                "subject_code": "MATH124ECE-V",
+                "prerequisite": "MATH113-V,MATH115-V",
+                "equiv_sub_code": "MATH124ECE-V",
+                "description": "Engineering Calculus 1",
+                "units": 4,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 5,
+                "subject_code": "GEC4-V",
+                "prerequisite": null,
+                "equiv_sub_code": "GEC4-V",
+                "description": "Mathematics in the Modern World",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 6,
+                "subject_code": "GEC5-V",
+                "prerequisite": null,
+                "equiv_sub_code": "GEC5-V",
+                "description": "Purposive Communication",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 7,
+                "subject_code": "PE2-V",
+                "prerequisite": "PE-1",
+                "equiv_sub_code": "PE2-V",
+                "description": "Rhythmic and Recreational Activities",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Second Term"
+              },
+              {
+                "id": 8,
+                "subject_code": "NSTP2-V",
+                "prerequisite": "NSTP1-V",
+                "equiv_sub_code": "NSTP2-V",
+                "description": "National Service Training Program 2 (NROTC II/CWTS II)",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "Second Term"
+              }
             ]
           }          
         ]
