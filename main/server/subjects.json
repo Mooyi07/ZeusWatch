@@ -209,13 +209,13 @@
               },
               {
                 "id": 2,
-                "subject_code": "DRAW132-V",
-                "prerequisite": "ECE111-V",
-                "equiv_sub_code": "DRAW132-V",
-                "description": "Computer Aided Drawing (CAD)",
-                "units": 2,
+                "subject_code": "MATH134ECE-V",
+                "prerequisite": "MATH124ECE-V",
+                "equiv_sub_code": "MATH134ECE-V",
+                "description": "Engineering Calculus 2",
+                "units": 4,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 3,
@@ -229,13 +229,13 @@
               },
               {
                 "id": 4,
-                "subject_code": "MATH124ECE-V",
-                "prerequisite": "MATH113-V,MATH115-V",
-                "equiv_sub_code": "MATH124ECE-V",
-                "description": "Engineering Calculus 1",
+                "subject_code": "PHYS134ECE-V",
+                "prerequisite": "MATH124ECE-V",
+                "equiv_sub_code": "PHYS134ECE-V",
+                "description": "Engineering Physics 1",
                 "units": 4,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 5,
