@@ -229,13 +229,13 @@
               },
               {
                 "id": 4,
-                "subject_code": "COMP132-V",
-                "prerequisite": "CPE112A-V",
-                "equiv_sub_code": "COMP132-V",
-                "description": "Computer Programming",
-                "units": 2,
+                "subject_code": "CPE134-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CPE134-V",
+                "description": "Fundamentals of Electrical Circuits",
+                "units": 4,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 5,
