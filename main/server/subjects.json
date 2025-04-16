@@ -239,13 +239,13 @@
               },
               {
                 "id": 5,
-                "subject_code": "GEC4-V",
+                "subject_code": "GEE1-V",
                 "prerequisite": null,
-                "equiv_sub_code": "GEC4-V",
-                "description": "Mathematics in the Modern World",
+                "equiv_sub_code": "GEE1-V",
+                "description": "Gender and Society",
                 "units": 3,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 6,
