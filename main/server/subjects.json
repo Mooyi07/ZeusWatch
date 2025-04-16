@@ -256,26 +256,6 @@
                 "units": 3,
                 "school_year": 2122,
                 "semester": "Third Term"
-              },
-              {
-                "id": 7,
-                "subject_code": "PE2-V",
-                "prerequisite": "PE-1",
-                "equiv_sub_code": "PE2-V",
-                "description": "Rhythmic and Recreational Activities",
-                "units": 2,
-                "school_year": 2122,
-                "semester": "Second Term"
-              },
-              {
-                "id": 8,
-                "subject_code": "NSTP2-V",
-                "prerequisite": "NSTP1-V",
-                "equiv_sub_code": "NSTP2-V",
-                "description": "National Service Training Program 2 (NROTC II/CWTS II)",
-                "units": 3,
-                "school_year": 2122,
-                "semester": "Second Term"
               }
             ]
           }          
