@@ -249,13 +249,13 @@
               },
               {
                 "id": 6,
-                "subject_code": "GEC5-V",
+                "subject_code": "GEC2-V",
                 "prerequisite": null,
-                "equiv_sub_code": "GEC5-V",
-                "description": "Purposive Communication",
+                "equiv_sub_code": "GEC2-V",
+                "description": "Readings in Philippine History",
                 "units": 3,
                 "school_year": 2122,
-                "semester": "Second Term"
+                "semester": "Third Term"
               },
               {
                 "id": 7,
