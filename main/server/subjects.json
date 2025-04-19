@@ -287,12 +287,12 @@
               },
               {
                 "id": 2,
-                "subject_code": "CPE214-V",
-                "prerequisite": null,
-                "equiv_sub_code": "CPE214-V",
-                "description": "Computer Organization and Architecture",
-                "units": 3,
-                "school_year": 2122,
+                "subject_code": "COMP222CPE-V",
+                "prerequisite": "COMP212A-V",
+                "equiv_sub_code": "COMP222CPE-V",
+                "description": "Data Structures and Algorithms Analysis",
+                "units": 2,
+                "school_year": 2223,
                 "semester": "First Term"
               },
               {
