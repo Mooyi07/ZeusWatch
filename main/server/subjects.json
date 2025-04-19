@@ -261,11 +261,11 @@
             "Summer_Term": [
               {
                 "id": 1,
-                "subject_code": "CPE112B-V",
-                "prerequisite": null,
+                "subject_code": "SIT1-V",
+                "prerequisite": "PHYS134ECE-V,MATH134ECE-V,GEE1-V,GEC2-V,CPE134-V,COMP212A-V,PE2-V,NSTP2-V,MATH124ECE-V,GEC5-V,GEC4-V,DRAW132-V,COMP132-V,CHEM124-V,PE1-V,NSTP1-V,MATH115-V,MATH113-V,GEC1-V,EM112ECE-V,ECE113-V,ECE111-V,CPE112A-V,CPE112-V",
                 "equiv_sub_code": "CPE112B-V",
-                "description": "Computer Programming 1 (Visual Basic)",
-                "units": 2,
+                "description": "Supervised Industrial Training 1 (6 weeks/240 hours)",
+                "units": 2.5,
                 "school_year": 2122,
                 "semester": "Summer Term"
               }
