@@ -257,6 +257,18 @@
                 "school_year": 2122,
                 "semester": "Third Term"
               }
+            ],
+            "Summer_Term": [
+              {
+                "id": 1,
+                "subject_code": "CPE112B-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CPE112B-V",
+                "description": "Computer Programming 1 (Visual Basic)",
+                "units": 2,
+                "school_year": 2122,
+                "semester": "Summer Term"
+              }
             ]
           }          
         ]
