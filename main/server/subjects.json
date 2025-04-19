@@ -271,7 +271,51 @@
               }
             ]
           }          
-        ]
+        ],
+        "Second_year_subs": [
+          {
+            "First_Term": [
+              {
+                "id": 1,
+                "subject_code": "CPE213-V",
+                "prerequisite": "COMP212A-V",
+                "equiv_sub_code": "CPE213-V",
+                "description": "Data Structures and Algorithms",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "First Term"
+              },
+              {
+                "id": 2,
+                "subject_code": "CPE214-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CPE214-V",
+                "description": "Computer Organization and Architecture",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "First Term"
+              },
+              {
+                "id": 3,
+                "subject_code": "CPE215-V",
+                "prerequisite": null,
+                "equiv_sub_code": "CPE215-V",
+                "description": "Digital Logic Design",
+                "units": 3,
+                "school_year": 2122,
+                "semester": "First Term"
+              },
+              {
+                "id": 4,
+                "subject_code": "MATH234ECE-V",
+                "prerequisite": null,
+                "equiv_sub_code": null,
+                "description": null,
+                "units": null,
+                "school_year": null,
+                "semester": null
+              },
+              {
       }
     ]
   }
