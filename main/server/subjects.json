@@ -277,12 +277,12 @@
             "First_Term": [
               {
                 "id": 1,
-                "subject_code": "CPE213-V",
+                "subject_code": "CPE222A-V",
                 "prerequisite": "COMP212A-V",
-                "equiv_sub_code": "CPE213-V",
-                "description": "Data Structures and Algorithms",
-                "units": 3,
-                "school_year": 2122,
+                "equiv_sub_code": "CPE222A-V",
+                "description": "Computer Programming 3 (Java EE)",
+                "units": 2,
+                "school_year": 2223,
                 "semester": "First Term"
               },
               {
