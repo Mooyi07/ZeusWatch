@@ -345,6 +345,78 @@
                 "school_year": 2223,
                 "semester": "First Term"
               }
+            ],
+          "Second_Term": [
+              {
+                "id": 1,
+                "subject_code": "CPE222A-V",
+                "prerequisite": "COMP212A-V",
+                "equiv_sub_code": "CPE222A-V",
+                "description": "Computer Programming 3 (Java EE)",
+                "units": 2,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 2,
+                "subject_code": "COMP222CPE-V",
+                "prerequisite": "COMP212A-V",
+                "equiv_sub_code": "COMP222CPE-V",
+                "description": "Data Structures and Algorithms Analysis",
+                "units": 2,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 3,
+                "subject_code": "MATH213ECE-V",
+                "prerequisite": "MATH134ECE-V",
+                "equiv_sub_code": "MATH213ECE-V",
+                "description": "Differential Equations",
+                "units": 3,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 4,
+                "subject_code": "PHYS214ECE-V",
+                "prerequisite": "PHYS134ECE-V",
+                "equiv_sub_code": "PHYS214ECE-V",
+                "description": "Engineering Physics 2",
+                "units": 4,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 5,
+                "subject_code": "CPE214-V",
+                "prerequisite": "CPE134-V,PHYS134ECE-V",
+                "equiv_sub_code": "CPE214-V",
+                "description": "Fundamentals of Electronics Circuits",
+                "units": 4,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 6,
+                "subject_code": "PE3-V",
+                "prerequisite": "PE1-V",
+                "equiv_sub_code": "PE3-V",
+                "description": "Individual and Dual Sports and Games",
+                "units": 2,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 7,
+                "subject_code": "GEC3-V",
+                "prerequisite": null, 
+                "equiv_sub_code": "GEC3-V",
+                "description": "The Contemporary World",
+                "units": 3,
+                "school_year": 2223,
+                "semester": "First Term"
+              }
             ]
           }
         ]
