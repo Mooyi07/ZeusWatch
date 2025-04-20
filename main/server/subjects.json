@@ -359,13 +359,13 @@
               },
               {
                 "id": 2,
-                "subject_code": "COMP222CPE-V",
-                "prerequisite": "COMP212A-V",
-                "equiv_sub_code": "COMP222CPE-V",
-                "description": "Data Structures and Algorithms Analysis",
+                "subject_code": "BOSH-V",
+                "prerequisite": null,
+                "equiv_sub_code": "BOSH-V",
+                "description": "Basic Occupational Safety and Health",
                 "units": 2,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
               },
               {
                 "id": 3,
