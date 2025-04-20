@@ -369,13 +369,13 @@
               },
               {
                 "id": 3,
-                "subject_code": "MATH213ECE-V",
-                "prerequisite": "MATH134ECE-V",
-                "equiv_sub_code": "MATH213ECE-V",
-                "description": "Differential Equations",
-                "units": 3,
+                "subject_code": "COMP232A-V",
+                "prerequisite": "COMP222A-V",
+                "equiv_sub_code": "COMP232A-V",
+                "description": "Computer Programming 4 (VB.Net)",
+                "units": 2,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
               },
               {
                 "id": 4,
