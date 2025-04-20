@@ -307,15 +307,26 @@
               },
               {
                 "id": 4,
-                "subject_code": "MATH234ECE-V",
-                "prerequisite": null,
-                "equiv_sub_code": null,
-                "description": null,
+                "subject_code": "PHYS214ECE-V",
+                "prerequisite": "PHYS134ECE-V",
+                "equiv_sub_code": "PHYS214ECE-V",
+                "description": "Engineering Physics 2",
+                "units": 4,
+                "school_year": 2223,
+                "semester": "First Term"
+              },
+              {
+                "id": 4,
+                "subject_code": "PHYS214ECE-V",
+                "prerequisite": "PHYS134ECE-V",
+                "equiv_sub_code": "PHYS214ECE-V",
+                "description": "Fundamentals of Electronics Circuits",
                 "units": null,
                 "school_year": null,
                 "semester": null
               }
-          ]}
+            ]
+          }
         ]
       }
     ]
