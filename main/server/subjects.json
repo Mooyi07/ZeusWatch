@@ -317,13 +317,13 @@
               },
               {
                 "id": 4,
-                "subject_code": "PHYS214ECE-V",
-                "prerequisite": "PHYS134ECE-V",
-                "equiv_sub_code": "PHYS214ECE-V",
+                "subject_code": "CPE214-V",
+                "prerequisite": "CPE134-V,PHYS134ECE-V",
+                "equiv_sub_code": "CPE214-V",
                 "description": "Fundamentals of Electronics Circuits",
-                "units": null,
-                "school_year": null,
-                "semester": null
+                "units": 4,
+                "school_year": 2223,
+                "semester": "First Term"
               }
             ]
           }
