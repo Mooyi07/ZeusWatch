@@ -389,13 +389,13 @@
               },
               {
                 "id": 5,
-                "subject_code": "CPE214-V",
-                "prerequisite": "CPE134-V,PHYS134ECE-V",
-                "equiv_sub_code": "CPE214-V",
-                "description": "Fundamentals of Electronics Circuits",
-                "units": 4,
+                "subject_code": "MATHEDA-V",
+                "prerequisite": "MATH134ECE-V",
+                "equiv_sub_code": "MATHEDA-V",
+                "description": "Engineering Data Analysis",
+                "units": 3,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
               },
               {
                 "id": 6,
