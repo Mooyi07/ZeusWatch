@@ -334,6 +334,16 @@
                 "units": 2,
                 "school_year": 2223,
                 "semester": "First Term"
+              },
+              {
+                "id": 7,
+                "subject_code": "GEC3-V",
+                "prerequisite": null, 
+                "equiv_sub_code": "GEC3-V",
+                "description": "The Contemporary World",
+                "units": 3,
+                "school_year": 2223,
+                "semester": "First Term"
               }
             ]
           }
