@@ -297,12 +297,12 @@
               },
               {
                 "id": 3,
-                "subject_code": "CPE215-V",
-                "prerequisite": null,
-                "equiv_sub_code": "CPE215-V",
-                "description": "Digital Logic Design",
+                "subject_code": "MATH213ECE-V",
+                "prerequisite": "MATH134ECE-V",
+                "equiv_sub_code": "MATH213ECE-V",
+                "description": "Differential Equations",
                 "units": 3,
-                "school_year": 2122,
+                "school_year": 2223,
                 "semester": "First Term"
               },
               {
