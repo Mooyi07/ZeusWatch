@@ -349,13 +349,13 @@
           "Second_Term": [
               {
                 "id": 1,
-                "subject_code": "CPE222A-V",
-                "prerequisite": "COMP212A-V",
-                "equiv_sub_code": "CPE222A-V",
-                "description": "Computer Programming 3 (Java EE)",
-                "units": 2,
+                "subject_code": "MATH223CPE-V",
+                "prerequisite": "MATH213ECE-V",
+                "equiv_sub_code": "MATH223CPE-V",
+                "description": "Advance Engineering Mathematics for CpE",
+                "units": 3,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
               },
               {
                 "id": 2,
