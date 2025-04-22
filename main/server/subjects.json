@@ -409,13 +409,23 @@
               },
               {
                 "id": 7,
-                "subject_code": "GEC3-V",
-                "prerequisite": null, 
-                "equiv_sub_code": "GEC3-V",
-                "description": "The Contemporary World",
+                "subject_code": "BES223-V",
+                "prerequisite": "PHYS214ECE-V", 
+                "equiv_sub_code": "BES223-V",
+                "description": "Statics of Rigid Bodies",
                 "units": 3,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
+              },
+              {
+                "id": 7,
+                "subject_code": "BES223-V",
+                "prerequisite": "PHYS214ECE-V", 
+                "equiv_sub_code": "BES223-V",
+                "description": "Statics of Rigid Bodies",
+                "units": 3,
+                "school_year": 2223,
+                "semester": "Second Term"
               }
             ]
           }
