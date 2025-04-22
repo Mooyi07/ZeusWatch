@@ -418,12 +418,12 @@
                 "semester": "Second Term"
               },
               {
-                "id": 7,
-                "subject_code": "BES223-V",
-                "prerequisite": "PHYS214ECE-V", 
-                "equiv_sub_code": "BES223-V",
-                "description": "Statics of Rigid Bodies",
-                "units": 3,
+                "id": 8,
+                "subject_code": "PE4-V",
+                "prerequisite": "PE1-V", 
+                "equiv_sub_code": "PE4-V",
+                "description": "Team Sports",
+                "units": 2,
                 "school_year": 2223,
                 "semester": "Second Term"
               }
