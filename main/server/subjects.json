@@ -399,13 +399,13 @@
               },
               {
                 "id": 6,
-                "subject_code": "PE3-V",
-                "prerequisite": "PE1-V",
-                "equiv_sub_code": "PE3-V",
-                "description": "Individual and Dual Sports and Games",
-                "units": 2,
+                "subject_code": "CPE223-V",
+                "prerequisite": "CPE214-V",
+                "equiv_sub_code": "CPE223-V",
+                "description": "Fundamentals of Mixed Signals and Sensors",
+                "units": 3,
                 "school_year": 2223,
-                "semester": "First Term"
+                "semester": "Second Term"
               },
               {
                 "id": 7,
