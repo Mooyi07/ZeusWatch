@@ -39,10 +39,6 @@ Developed by:
 - **Lanz Joseph T. Villanueva** [Facebook](https://www.facebook.com/mooyi07)
 - **Crhiz Q. Salillas** [Facebook](https://www.facebook.com/crhiz15)
 
-💬 **Contact**
-
-Visit the official website: [ZeusWatch](https://mooyi.pages.dev)
-
 📜 **License**
 
 MIT License. See LICENSE file for details.
