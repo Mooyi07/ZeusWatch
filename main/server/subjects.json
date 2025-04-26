@@ -438,6 +438,16 @@
                 "units":3,
                 "school_year":2223,
                 "semester":"Third Term"
+              },
+              {
+                "id": 2,
+                "subject_code": "CPE232-V",
+                "prerequisite": "CPE214-V",
+                "equiv_sub_code":"CPE232-V",
+                "description": "Computer Engineering Drafting and Design",
+                "units": 2,
+                "school_year": 2223,
+                "semester": "Third Term"
               }
             ]
           }
