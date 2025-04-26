@@ -42,7 +42,3 @@ Developed by:
 📜 **License**
 
 MIT License. See LICENSE file for details.
-
----
-
-This version includes the requested icons for each section of the README.
