@@ -37,7 +37,7 @@ To run this project locally:
 
 Developed by:
 - **Lanz Joseph T. Villanueva** [Facebook](https://www.facebook.com/mooyi07)
-- **Crhiz Q. Salillas**
+- **Crhiz Q. Salillas** [Facebook](https://www.facebook.com/crhiz15)
 
 💬 **Contact**
 
