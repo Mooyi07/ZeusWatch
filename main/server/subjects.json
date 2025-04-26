@@ -428,9 +428,18 @@
                 "semester": "Second Term"
               }
             ],
-            "Third_Term":[{
-              
-            }]
+            "Third_Term":[
+              {
+                "id": 1,
+                "subject_code":"GEC6-V",
+                "prerequisite":null,
+                "equiv_sub_code":"GEC6-V",
+                "description":"Art Appreciation",
+                "units":3,
+                "school_year":2223,
+                "semester":"Third Term"
+              }
+            ]
           }
         ]
       }
