@@ -448,6 +448,16 @@
                 "units": 2,
                 "school_year": 2223,
                 "semester": "Third Term"
+              },
+              {
+                "id": 3,
+                "subject_code": "BES232-V",
+                "prerequisite": "BES223-v",
+                "equiv_sub_code":"BES232-V",
+                "description":"Dynamics of Rigid Bodies",
+                "units":3,
+                "school_year": 2223,
+                "semester": "Third Term"
               }
             ]
           }
