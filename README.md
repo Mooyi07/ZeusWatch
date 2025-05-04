@@ -1,33 +1,44 @@
-# ZeusWatch - An Energy Efficiency Framework 
+# ZeusWatch - Energy Efficiency Framework
 
-The $${\color{#4e73df}ZeusWatch}$$ is an Energy Efficiency Framework for $${\color{red}Technological \space University \space of\space the \space Philippines \space - \space Visayas}$$
+🚀 **Overview**
 
-## Introduction 
+ZeusWatch is an **Energy Efficiency Framework** developed for the **Technological University of the Philippines - Visayas (TUPV)**. It uses **IoT technology** to monitor energy usage, analyze patterns, and predict ways to optimize consumption in educational institutions.
 
-Energy efficiency is essential for schools due to high energy consumption, rising costs, and environmental concerns, but challenges like outdated infrastructure and the lack of real-time monitoring make management difficult. The Internet of Things (IoT) can improve energy management by connecting devices to collect real-time data, enabling automatic control, identifying inefficiencies, and supporting predictive maintenance. This study aims to bridge the research gap in energy management for academic institutions, providing insights for implementing smart campus technology and helping policymakers and administrators enhance efficiency while reducing costs.
+📜 **Mission**
 
-## Preview
+**ZeusWatch** aims to:
+- **Optimize** energy usage in schools. 
+- **Reduce costs** through real-time monitoring. 
+- **Support sustainability** by lowering carbon emissions.
 
-![ZeusWatch Preview](main/img/readmePrev.png)
+🔧 **Features**
 
-## Bugs and Issues
+- Real-time energy data collection.
+- Predictive energy analysis.
+- Smart campus technology implementation.
+- Cost-saving recommendations for institutions.
 
-Have a bug or an issue with this framework? [Open a new issue](https://github.com/Mooyi07/ZeusWatch/issues) here on GitHub.
+📚 **Technologies Used**
 
-## About
+- **HTML** 
+- **CSS**
+- **JavaScript**
+- **PHP**
+- **IoT (Internet of Things)**
 
-The objective of $${\color{#4e73df}ZeusWatch}$$ is to $${\color{#f6c23e}predict}$$ and $${\color{green}analyze}$$ using the collected IoT data. Schools are notable energy consumers, and a significant amount of this energy is lost due to ineffective management and usage practices.  The current energy management systems in schools often lack immediate monitoring and intelligent control, resulting in unnecessary consumption and higher operational expenses.  Due to excessive carbon emissions. This inefficiency impacts the financial budgets of schools and worsens environmental problems.
+🔧 **Installation**
 
-* <https://github.com/Mooyi07/ZeusWatch>
+To run this project locally:
+1. Clone the repository.
+2. Install the dependencies.
+3. Follow the configuration setup in the `docs/installation.md`.
 
-$${\color{#4e73df}ZeusWatch}$$  was created by and is maintained by **[Lanz Joseph T. Villanueva](https://www.facebook.com/mooyi07)**.
+🧑‍💻 **Contributors**
 
-* <https://www.facebook.com/mooyi07>
-* <https://mooyi.pages.dev/>
-* <https://github.com/Mooyi07>
+Developed by:
+- **Lanz Joseph T. Villanueva** [Facebook](https://www.facebook.com/mooyi07)
+- **Crhiz Q. Salillas** [Facebook](https://www.facebook.com/crhiz15)
 
-$${\color{#4e73df}ZeusWatch}$$  framework is created by [Lanz Joseph T. Villanueva](https://www.facebook.com/mooyi07) and [Crhiz Q. Salillas](https://www.facebook.com/crhiz15).
+📜 **License**
 
-## Copyright
-
-Copyright &copy; $${\color{#4e73df}ZeusWatch}$$ 2024
+MIT License. See LICENSE file for details.
